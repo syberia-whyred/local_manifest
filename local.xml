@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="caf"
+           fetch="git://codeaurora.org/quic/la"
+           review="codeaurora.org"
+           revision="refs/tags/LA.UM.8.9.r1-08400-SM6xx.0"
+           sync-j="4"
+           sync-c="true"/>
+
+  <remove-project name="platform/external/tinycompress" />
+  <project name="platform/external/tinycompress" path="external/tinycompress" remote="caf"/>
+  <remove-project name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" />
+  <project path="vendor/qcom/opensource/core-utils" name="AOSPA/android_vendor_qcom-opensource_core-utils" remote="github" revision="quartz" />
+  <remove-project name="platform_prebuilts_abi-dumps_ndk" />
+  <remove-project name="platform_prebuilts_abi-dumps_vndk" />
+  <project path="prebuilts/abi-dumps/ndk" name="orgesified/platform_prebuilts_abi-dumps_ndk" remote="github" revision="10.0" />
+  <project path="prebuilts/abi-dumps/vndk" name="orgesified/platform_prebuilts_abi-dumps_vndk" remote="github" revision="10.0" />
+  <remove-project name="platform_frameworks_opt_telephony" />
+  <project path="frameworks/opt/telephony" name="orgesified/syberia-telephony" remote="github" revision="10.0" />
+  <project path="external/json-c" name="platform/external/json-c" remote="caf" />
+
+</manifest>
+
